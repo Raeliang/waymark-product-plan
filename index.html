@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f5ef" />
+    <title>路书 Waymark — 产品计划书</title>
+    <style>
+      :root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;color:#202821;background:#f4f5ef;font-synthesis:none;text-rendering:optimizeLegibility}*{box-sizing:border-box}body{margin:0;min-width:320px}.shell{min-height:100vh;display:grid;grid-template-columns:260px 1fr}.sidebar{background:#18382f;color:#eef4eb;padding:28px 20px;display:flex;flex-direction:column;gap:28px}.brand{display:flex;align-items:center;gap:12px}.brand-mark{width:38px;height:38px;border:1px solid #91b19a;border-radius:12px;display:grid;place-items:center;color:#b9d9aa;font-weight:800}.brand strong{display:block;font-size:14px;letter-spacing:.02em}.brand small{display:block;color:#a9c0b1;font-size:11px;margin-top:3px}.sidebar-label{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#9db7a7;padding:0 10px}.nav{display:grid;gap:5px}.nav button{display:flex;align-items:center;gap:11px;width:100%;padding:10px;border:0;border-radius:9px;background:transparent;color:#cfddd3;text-align:left;font:inherit;font-size:12px;cursor:pointer}.nav button:hover{background:#ffffff12}.nav button.active{background:#ffffff18;color:white}.nav .num{width:24px;height:24px;border-radius:7px;display:grid;place-items:center;background:#ffffff12;color:#b8d0be;font-size:10px;font-weight:700}.sidebar-foot{margin-top:auto;padding:13px 11px;border-top:1px solid #ffffff20;color:#aac1b0;font-size:11px;line-height:1.6}.main{min-width:0;display:flex;flex-direction:column}.topbar{height:66px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,56px);border-bottom:1px solid #dfe3da;background:#fbfcf8}.crumb{font-size:12px;color:#69736b}.crumb strong{color:#24342a}.actions{display:flex;align-items:center;gap:8px}.save-state{font-size:11px;color:#788379;margin-right:10px}.btn{border:1px solid #d7ded4;background:#fff;color:#344239;padding:9px 12px;border-radius:8px;font:inherit;font-size:11px;font-weight:600;cursor:pointer}.btn:hover{border-color:#86a58d}.btn.primary{background:#2d6653;border-color:#2d6653;color:#fff}.btn.danger{color:#9e5549}.content{width:min(980px,100%);margin:0 auto;padding:clamp(24px,5vw,62px) clamp(20px,5vw,64px) 40px;flex:1}.eyebrow{font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#6b8b6b;font-weight:800}.slide{display:none;animation:fade .2s ease}.slide.active{display:block}@keyframes fade{from{opacity:.4;transform:translateY(4px)}to{opacity:1;transform:none}}h1{font-size:clamp(34px,5vw,56px);line-height:1.1;letter-spacing:-.045em;margin:15px 0 17px;color:#20362d}h2{font-size:clamp(26px,3vw,36px);line-height:1.2;letter-spacing:-.035em;margin:12px 0 12px;color:#20362d}h3{font-size:15px;margin:0 0 8px;color:#294439}p{font-size:14px;line-height:1.75;color:#57635a;margin:7px 0}.lede{font-size:17px;line-height:1.65;max-width:760px;color:#516157}.hero{margin:30px 0 32px;padding:22px 24px;border-left:3px solid #98b37d;background:#eaf0e5;border-radius:0 12px 12px 0}.hero p{margin:0;color:#344b3d;font-size:16px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.tag{font-size:11px;padding:7px 10px;border-radius:99px;background:#e5ebe2;color:#4b6552}.grid{display:grid;gap:14px}.grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}.panel{border:1px solid #e0e5dc;background:#fff;border-radius:12px;padding:17px 18px}.panel p{font-size:12px;margin:4px 0 0}.panel .kicker{font-size:10px;color:#829083;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}.problem{display:grid;grid-template-columns:32px 1fr;gap:10px}.problem .icon{width:28px;height:28px;border-radius:8px;background:#f4ece3;color:#a66b39;display:grid;place-items:center;font-size:12px;font-weight:800}.problem strong{font-size:13px;color:#2d3a31}.problem p{margin-top:4px}.callout{padding:16px 18px;border-radius:10px;background:#203d32;color:#f1f5ee;font-size:13px;line-height:1.65}.callout strong{color:#d6ebc6}.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:22px}.step{padding:13px 12px;border-top:2px solid #94ad86;background:#fff;border-radius:0 0 9px 9px;min-height:125px}.step small{color:#779072;font-size:10px;font-weight:800}.step strong{display:block;margin:8px 0 5px;font-size:12px;color:#30473a}.step p{font-size:11px;line-height:1.55;margin:0}.table-wrap{overflow:auto;border:1px solid #e0e5dc;border-radius:12px;background:#fff}table{border-collapse:collapse;width:100%;min-width:680px}th,td{text-align:left;padding:13px 14px;border-bottom:1px solid #edf0ea;vertical-align:top;font-size:12px;line-height:1.55}th{font-size:10px;color:#78867a;background:#f8faf6;letter-spacing:.06em}td:first-child{font-weight:700;color:#34483a;width:18%}tr:last-child td{border-bottom:0}.phase{display:flex;gap:14px;padding:15px 0;border-bottom:1px solid #e0e5dc}.phase:last-child{border:0}.phase .badge{flex:0 0 84px;color:#648160;font-size:10px;font-weight:800;letter-spacing:.06em;padding-top:2px}.phase h3{font-size:13px}.phase p{font-size:12px;margin:3px 0}.metric{padding:15px 16px;background:#fff;border:1px solid #e0e5dc;border-radius:10px}.metric strong{display:block;font-size:13px;color:#30483a;margin-bottom:5px}.metric span{font-size:11px;color:#69756a;line-height:1.55}.quote{font-size:19px;line-height:1.5;letter-spacing:-.02em;color:#314a3c;padding:18px 0;border-bottom:1px solid #e1e6dd}.quote:last-child{border:0}.quote small{display:block;color:#7a867b;font-size:10px;letter-spacing:.08em;margin-top:10px}.slide-footer{display:flex;justify-content:space-between;color:#879188;font-size:10px;margin-top:40px;padding-top:12px;border-top:1px solid #e0e5dc}.editor-hint{font-size:10px;color:#8a958a;margin-top:15px}.editing [contenteditable="true"]{outline:2px dashed #aac08e;outline-offset:3px;border-radius:3px;cursor:text}.editing [contenteditable="true"]:focus{outline-color:#648960;background:#fffef5}.bottombar{height:68px;padding:0 clamp(20px,4vw,56px);border-top:1px solid #dfe3da;background:#fbfcf8;display:flex;justify-content:space-between;align-items:center}.progress{font-size:11px;color:#69766c}.pager{display:flex;gap:8px}.modal-back{position:fixed;inset:0;background:#14261e77;display:none;place-items:center;padding:20px}.modal-back.open{display:grid}.modal{width:min(440px,100%);padding:24px;background:#fbfcf8;border-radius:14px;box-shadow:0 24px 70px #10251d44}.modal h2{font-size:20px}.modal p{font-size:13px}.modal-actions{display:flex;justify-content:flex-end;gap:8px;margin-top:20px}.toast{position:fixed;bottom:82px;left:50%;transform:translateX(-50%);padding:9px 13px;border-radius:20px;background:#203d32;color:#fff;font-size:11px;opacity:0;pointer-events:none;transition:opacity .2s}.toast.show{opacity:1}.editable-label{display:none}.editing .editable-label{display:inline-block;color:#778b6f;font-size:10px;margin:0 0 8px}
+      @media(max-width:800px){.shell{grid-template-columns:1fr}.sidebar{padding:13px 16px;gap:12px}.sidebar .brand{display:none}.sidebar-label,.sidebar-foot{display:none}.nav{display:flex;overflow:auto;gap:4px}.nav button{white-space:nowrap;width:auto;min-width:max-content;padding:7px 9px;font-size:10px}.nav .num{width:20px;height:20px}.topbar{height:54px}.grid.three{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.step{min-height:unset}.content{padding-top:30px}.save-state{display:none}}
+      @media(max-width:560px){.grid.two{grid-template-columns:1fr}.actions .btn{padding:8px;font-size:10px}.crumb{font-size:10px}.bottombar{height:60px}.slide-footer{margin-top:26px}}
+      @media print{@page{size:landscape;margin:12mm}.shell{display:block;background:white}.sidebar,.topbar,.bottombar,.editor-hint,.modal-back,.toast{display:none!important}.content{width:auto;padding:0}.slide{display:block!important;page-break-after:always;animation:none;min-height:175mm;padding:7mm 8mm}.slide:last-child{page-break-after:auto}.slide-footer{margin-top:16px}.panel,.metric,.table-wrap,.hero{break-inside:avoid}.steps{grid-template-columns:repeat(5,1fr)}body{background:white}}
+
+      .app-sketch{display:grid;grid-template-columns:1fr 1.45fr 1fr;gap:13px;align-items:start;margin:22px 0}.app-phone{border:1px solid #cfd8cd;border-radius:16px;background:#f9faf6;padding:9px;box-shadow:0 5px 16px #203c3010}.app-screen{min-height:365px;background:#fff;border:1px solid #e7ebe4;border-radius:11px;padding:13px 11px;overflow:hidden}.app-status{display:flex;justify-content:space-between;color:#9aa49a;font-size:8px;margin-bottom:12px}.app-head{display:flex;justify-content:space-between;align-items:center;font-size:11px;font-weight:800;color:#294438;margin-bottom:10px}.app-caption{font-size:8px;color:#819083;line-height:1.45}.app-progress{height:5px;border-radius:5px;background:#e7eee4;margin:7px 0 12px}.app-progress i{display:block;width:68%;height:100%;border-radius:5px;background:#85a778}.app-mini-card{border:1px solid #e7ebe4;border-radius:8px;padding:9px;margin:7px 0}.app-mini-card strong{display:block;color:#344b3d;font-size:9px;margin-bottom:4px}.app-mini-card span{font-size:8px;color:#728074;line-height:1.4}.app-map{height:75px;background:linear-gradient(145deg,#e8efdf,#f2ecd8 52%,#e0ead9);border-radius:8px;position:relative;margin:8px 0;overflow:hidden}.app-map:before{content:"";position:absolute;left:45%;top:-12%;height:130%;width:3px;background:#56836a;transform:rotate(35deg);border-radius:4px}.app-map:after{content:"SF  •  Yosemite";position:absolute;left:9px;bottom:8px;font-size:8px;color:#607362}.app-row{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:8px 0;border-bottom:1px solid #edf0ea}.app-row b{font-size:8px;color:#35483b}.app-row span{font-size:7px;color:#7c897d;text-align:right}.app-source{font-size:7px;color:#55735c;border:1px solid #dfe8da;background:#f6f9f3;border-radius:6px;padding:6px 7px;margin-top:6px}.app-cta{display:block;text-align:center;background:#316a55;color:white;border-radius:7px;padding:8px 5px;font-size:8px;font-weight:700;margin-top:9px}.app-tabs{display:flex;justify-content:space-around;border-top:1px solid #edf0ea;margin:12px -2px 0;padding-top:9px;color:#829083;font-size:7px}.app-tabs b{color:#326c55}.app-sketch-note{font-size:10px;color:#657369;line-height:1.55;margin-top:10px}.app-flow{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:14px}.app-flow span{background:#eaf0e5;border-radius:20px;padding:6px 9px;color:#48624b;font-size:9px}.app-flow i{font-style:normal;color:#91a18f;font-size:10px}@media(max-width:800px){.app-sketch{grid-template-columns:1fr}.app-screen{min-height:unset}.app-map{height:55px}}
+    </style>
+  </head>
+  <body>
+    <div class="shell" id="shell">
+      <aside class="sidebar">
+        <div class="brand"><div class="brand-mark">路</div><div><strong>路书 <span style="font-weight:400">WAYMARK</span></strong><small>自驾旅行规划 · 产品计划</small></div></div>
+        <div class="sidebar-label">产品计划 · v0.2</div>
+        <nav class="nav" id="nav" aria-label="计划书章节"></nav>
+        <div class="sidebar-foot">产品目标<br />把分散攻略变成有依据、可调整的自驾行程。<br /><br />产品名称「路书」为工作名。</div>
+      </aside>
+      <main class="main">
+        <header class="topbar">
+          <div class="crumb"><strong>路书 / Waymark</strong>　·　产品计划书</div>
+          <div class="actions"><span class="save-state" id="saveState">已保存到此浏览器</span><button class="btn" id="editBtn">编辑内容</button><button class="btn" id="exportBtn">导出 Markdown</button><button class="btn" id="printBtn">打印 / PDF</button></div>
+        </header>
+        <div class="content" id="slides">
+          <section class="slide active" data-title="产品概览" data-kicker="PRODUCT PLAN · 01">
+            <div class="eyebrow">产品计划书 · v0.2</div>
+            <h1>让每一天的<br />旅行安排都有依据。</h1>
+            <p class="lede">路书帮助自驾旅行者，把自己的偏好、真实旅行体验、旅行社路线、官方信息和地图住宿资料，整理成一份可核对、可替换、可同行共识的行程。</p>
+            <div class="hero"><p><strong>核心承诺：</strong>AI 可以帮你规划，但每条关键安排都能看见来源、适用条件和仍待确认的事项。</p></div>
+            <div class="grid three">
+              <div class="panel"><div class="kicker">给谁</div><h3>自己做主的自驾旅行者</h3><p>尤其是第一次去陌生地区、路线跨城、同行偏好不同的人。</p></div>
+              <div class="panel"><div class="kicker">解决什么</div><h3>规划和核实行程太分散</h3><p>不用在攻略、地图、酒店和聊天记录之间来回拼信息。</p></div>
+              <div class="panel"><div class="kicker">怎么做到</div><h3>安排、证据和决策放在一起</h3><p>按天审核，能比较替代项，修改后能看见路线和住宿的连带影响。</p></div>
+            </div>
+            <div class="tags"><span class="tag">路线规划</span><span class="tag">证据可追溯</span><span class="tag">逐日共创</span><span class="tag">途中可调整</span></div>
+            <div class="slide-footer"><span>工作名：路书 Waymark</span><span>可直接编辑 · 本机自动保存</span></div>
+          </section>
+          <section class="slide" data-title="用户痛点" data-kicker="THE PROBLEM · 02">
+            <div class="eyebrow">01 / 用户痛点</div><h2>现在的规划像一场<br />没有工作台的研究项目。</h2>
+            <p class="lede">信息并不缺，缺的是把它们组织成一个可判断、可修改、能协同行动的计划。</p>
+            <div class="grid two" style="margin-top:24px">
+              <div class="panel problem"><span class="icon">01</span><div><strong>AI 行程看起来完整，用户仍得逐点查证</strong><p>不知道每日安排是否合理；行驶距离、停留时长、景点价值和个人兴趣都要自己复核。</p></div></div>
+              <div class="panel problem"><span class="icon">02</span><div><strong>替代方案缺少依据，选择成本高</strong><p>不想徒步时，很难快速找到同区域、同一天可执行的轻松选项，还要确认它是否真实存在。</p></div></div>
+              <div class="panel problem"><span class="icon">03</span><div><strong>住宿搜索和行程规划脱节</strong><p>先排路线，再另开地图和订房平台找酒店；住宿稀缺或位置不合适时，路线又得重排。</p></div></div>
+              <div class="panel problem"><span class="icon">04</span><div><strong>做好的计划不适合途中调整</strong><p>天气或体力变化后，改一个点会牵动驾驶、后续安排和住宿，却没有清晰的影响说明。</p></div></div>
+            </div>
+            <div class="callout" style="margin-top:18px"><strong>用户真正想买到的结果：</strong>不是更多攻略，而是少做重复搜索，知道为什么这样安排，并能安心地做取舍。</div>
+            <div class="slide-footer"><span>问题定义来自用户描述，待访谈验证</span><span>02 / 11</span></div>
+          </section>
+          <section class="slide" data-title="目标用户与场景" data-kicker="WHO & WHEN · 03">
+            <div class="eyebrow">02 / 目标用户与使用场景</div><h2>先服务需要自己做功课的<br />多人自驾小团体。</h2>
+            <div class="grid two" style="margin-top:24px">
+              <div class="panel"><div class="kicker">核心用户</div><h3>行程组织者 / 旅行发起人</h3><p>负责搜资料、定路线、协调同伴，担心遗漏关键事项，也不想替 AI 的建议背书。</p></div>
+              <div class="panel"><div class="kicker">共同决策者</div><h3>同行家人或朋友</h3><p>对体力、兴趣、驾驶时长和预算有不同偏好，希望能直接对具体一天表达意见。</p></div>
+            </div>
+            <h3 style="margin-top:24px">关键使用场景</h3>
+            <div class="grid three" style="margin-top:12px">
+              <div class="metric"><strong>出发前 · 从零搭路线</strong><span>给出人数、天数、必去点和偏好，先得到可讨论的路线框架。</span></div>
+              <div class="metric"><strong>出发前 · 逐日确认</strong><span>核对每天去哪、开多久、做什么、住哪里，替换不合适的安排。</span></div>
+              <div class="metric"><strong>旅行中 · 临时改计划</strong><span>遇到天气或现实变化，查看可行替代项和被影响的后续安排。</span></div>
+            </div>
+            <div class="hero"><p><strong>首发切口建议：</strong>美国西部自驾路线。它能集中验证长距离驾驶、国家公园活动、住宿稀缺、季节和天气变化等复杂问题；首版先支持一个示范走廊，不追求覆盖所有目的地。</p></div>
+            <div class="slide-footer"><span>首发地区是产品假设，需通过用户验证确定</span><span>03 / 11</span></div>
+          </section>
+          <section class="slide" data-title="产品解决方案" data-kicker="THE SOLUTION · 04">
+            <div class="eyebrow">03 / 产品解决方案</div><h2>围绕“每日计划”组织<br />信息和共同决策。</h2>
+            <p class="lede">用户先定旅行约束，系统给出可审核的日程；每个安排附依据，每次修改都说明会影响什么。</p>
+            <div class="steps">
+              <div class="step"><small>STEP 01</small><strong>输入旅行条件</strong><p>同行人数、日期、必去点、兴趣、体力、驾驶上限和预算倾向。</p></div>
+              <div class="step"><small>STEP 02</small><strong>生成路线草案</strong><p>按地理顺序与停留节奏编排天数，标出假设和待确认信息。</p></div>
+              <div class="step"><small>STEP 03</small><strong>逐日看证据</strong><p>对照游记、旅行社路线、官方资料和地图数据，判断来源适用性。</p></div>
+              <div class="step"><small>STEP 04</small><strong>比较并替换</strong><p>查看不同活动的时间、体力、绕行和住宿影响；同行者可共同确认。</p></div>
+              <div class="step"><small>STEP 05</small><strong>带着计划上路</strong><p>保留确认版；临时调整时重算相关安排并留下变更记录。</p></div>
+            </div>
+            <div class="grid two" style="margin-top:20px">
+              <div class="panel"><div class="kicker">示例 · 优胜美地这一天</div><p><strong>计划：</strong>山谷观景 + 徒步路线。<strong>偏好不符：</strong>用户不想徒步。<strong>可选：</strong>低体力观景组合；展示多走/少走的时间差、停车/开放信息和可追溯来源。选中后重新评估当晚住宿和次日出发。</p></div>
+              <div class="panel"><div class="kicker">产品反馈闭环</div><p>用户接受、替换或标记“不感兴趣”的结果，都能帮助调整本次行程；只有用户明确同意，偏好才保存为未来旅行设置。</p></div>
+            </div>
+            <div class="slide-footer"><span>日程是用户审核的草案，不是自动替用户做决定</span><span>04 / 11</span></div>
+          </section>
+          <section class="slide" data-title="功能架构" data-kicker="FUNCTIONS · 05">
+            <div class="eyebrow">04 / 功能架构</div><h2>首版功能围绕一条主线：<br />从草案到可执行行程。</h2>
+            <div class="table-wrap" style="margin-top:20px"><table><thead><tr><th>模块</th><th>用户能做什么</th><th>解决的痛点</th><th>首版优先级</th></tr></thead><tbody>
+              <tr><td>旅行档案</td><td>输入日期、人数、出发/结束点、必去地点、兴趣、体力、预算倾向、每日驾驶上限。</td><td>把分散在对话里的前提变成明确约束。</td><td>必做</td></tr>
+              <tr><td>逐日行程编辑器</td><td>按天查看路线、停留顺序、活动时长、驾驶段和当天终点；拖动/替换地点。</td><td>让用户审核“每一天”，不必重读整份攻略。</td><td>必做</td></tr>
+              <tr><td>备选活动比较</td><td>按兴趣、体力、时间和绕行展示替代项；一键应用并重算相关日程。</td><td>快速回答“我不想做这个，有什么真实可行的替代？”</td><td>必做</td></tr>
+              <tr><td>来源与事实核对</td><td>查看来源类型、原文链接、发布时间/旅行时间、适用条件和核验状态。</td><td>减少对 AI 无依据建议的重复搜索。</td><td>必做</td></tr>
+              <tr><td>住宿联动</td><td>按当天终点找住宿区域/候选住宿，比较到路线、景点的距离与选择数量。</td><td>尽早发现住宿选择少、位置不便造成的路线问题。</td><td>首版轻量</td></tr>
+              <tr><td>同行协作</td><td>邀请同行者对具体日期留言、投票或确认。</td><td>减少群聊里反复同步和失焦讨论。</td><td>轻量版</td></tr>
+              <tr><td>途中调整</td><td>查看天气/临时信息，换活动后检查后续驾驶、住宿与未完成安排。</td><td>让计划能适应现实变化。</td><td>基础调整首版；实时预警后续</td></tr>
+            </tbody></table></div>
+            <div class="slide-footer"><span>“首版轻量”表示只做决策必需的信息，不做完整预订交易</span><span>05 / 11</span></div>
+          </section>
+          <section class="slide" data-title="App 功能框架草图" data-kicker="APP STRUCTURE · 06">
+            <div class="eyebrow">05 / App 功能框架草图</div><h2>手机里完成从规划到<br />当天调整的核心流程。</h2>
+            <p class="lede">底部导航承载长期入口；行程详情承载逐日决策；来源、替代和住宿贴着具体安排出现。</p>
+            <div class="grid four" style="display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;margin-top:17px">
+              <div class="metric"><strong>行程</strong><span>新建旅行、查看所有计划、继续审核今天的行程。</span></div>
+              <div class="metric"><strong>发现</strong><span>按地点浏览有来源的路线、活动与他人体验。</span></div>
+              <div class="metric"><strong>收藏</strong><span>收集帖子、地点和活动，之后加入某一天。</span></div>
+              <div class="metric"><strong>我的</strong><span>旅行偏好、同行设置、资料与应用设置。</span></div>
+            </div>
+            <div class="app-sketch" aria-label="自驾旅行 App 三个关键页面框架草图">
+              <div class="app-phone"><div class="app-screen"><div class="app-status"><span>9:41</span><span>•••　▰</span></div><div class="app-head"><span>我的行程</span><span>＋</span></div><div class="app-caption">正在规划</div><div class="app-mini-card"><strong>加州国家公园自驾</strong><span>9 天 · 3 位同行<br />旧金山 → 优胜美地 → 洛杉矶</span><div class="app-progress"><i></i></div><span>6 / 9 天已确认</span></div><div class="app-mini-card"><strong>继续确认 · 第 4 天</strong><span>优胜美地｜活动和住宿待确认</span></div><div class="app-cta">继续规划</div><div class="app-tabs"><b>行程</b><span>发现</span><span>收藏</span><span>我的</span></div></div><div class="app-sketch-note"><strong>行程首页：</strong>看整体进度，快速回到待确认的日期。</div></div>
+              <div class="app-phone"><div class="app-screen"><div class="app-status"><span>9:41</span><span>•••　▰</span></div><div class="app-head"><span>‹　加州自驾</span><span>⋯</span></div><div class="app-caption">第 4 天 · 9 月 18 日</div><div class="app-head" style="margin:5px 0 2px"><span>优胜美地国家公园</span><span style="font-size:8px;color:#648160">待确认</span></div><div class="app-map"></div><div class="app-row"><b>驾驶</b><span>从马里波萨出发 · 约 1 小时*</span></div><div class="app-row"><b>上午活动</b><span>山谷观景 · 低体力</span></div><div class="app-row"><b>下午活动</b><span>瀑布步道 · 徒步 · 约 2 小时</span></div><div class="app-source">依据：官方园区信息 · 旅行者游记 2 篇　查看来源 ›</div><div class="app-row"><b>住宿区域</b><span>公园周边 · 查看住宿选择 ›</span></div><div class="app-cta">替换下午活动</div><div class="app-tabs"><b>行程</b><span>发现</span><span>收藏</span><span>我的</span></div></div><div class="app-sketch-note"><strong>每日详情：</strong>路线、活动、来源和住宿围绕同一天呈现。驾驶时间为地图估算，需接入后核实。</div></div>
+              <div class="app-phone"><div class="app-screen"><div class="app-status"><span>9:41</span><span>•••　▰</span></div><div class="app-head"><span>选择替代活动</span><span>×</span></div><div class="app-caption">不想徒步？以下选项来自可追溯资料</div><div class="app-mini-card"><strong>山谷观景点组合</strong><span>低体力 · 约 1.5 小时<br />比原安排少步行；驾驶增加约 15 分钟*</span><div class="app-source">官方地点信息 + 旅行者行程　2 个来源</div></div><div class="app-mini-card"><strong>短程步道 + 游客中心</strong><span>轻体力 · 约 2 小时<br />当天住宿区域不变</span><div class="app-source">旅行者游记 · 季节待核实　1 个来源</div></div><div class="app-caption">应用后将重新检查驾驶时间、停留安排和住宿。</div><div class="app-cta">应用并预览行程变化</div><div class="app-tabs"><b>行程</b><span>发现</span><span>收藏</span><span>我的</span></div></div><div class="app-sketch-note"><strong>替代项面板：</strong>对比兴趣、体力、耗时、驾驶变化与来源，再决定是否替换。</div></div>
+            </div>
+            <div class="callout"><strong>页面关系：</strong>行程首页 → 旅行总览/地图 → 某一天 → 活动详情与来源 → 选择替代 → 预览影响 → 确认更新。住宿入口始终关联当天终点；出发后可从当天计划进入调整模式。<br /><span style="font-size:10px;color:#bfd4c0">*示意数据只用于草图布局，不代表已核实的真实路线或时长。</span></div>
+            <div class="slide-footer"><span>框架草图用于确认 App 信息架构，非最终视觉稿</span><span></span></div>
+          </section>
+          <section class="slide" data-title="资料与信任机制" data-kicker="EVIDENCE · 07">
+            <div class="eyebrow">06 / 资料来源与信任机制</div><h2>不同来源回答不同问题，<br />不把“有帖子”当成“已证实”。</h2>
+            <div class="table-wrap" style="margin-top:20px"><table><thead><tr><th>资料类型</th><th>能提供的价值</th><th>不能直接证明</th><th>产品如何使用</th></tr></thead><tbody>
+              <tr><td>个人旅行帖子 / 游记</td><td>体验、偏好、实际停留感受、踩坑和活动细节。</td><td>当前开放状态、未来天气、每个人都适合。</td><td>引用原帖链接和旅行时间；提炼可核实事实与主观感受，分开显示。</td></tr>
+              <tr><td>旅行社执行过的行程</td><td>常见路线组合、每日分段、住宿城市、成熟线路参考。</td><td>适合自驾、自由活动时间充足、每位团员都完整执行。</td><td>标为团队/大巴/套餐背景；与自驾路况和个人偏好重新计算。</td></tr>
+              <tr><td>官方来源</td><td>开放时间、预约、道路关闭、规则与安全信息。</td><td>用户是否喜欢、体验是否值得。</td><td>优先验证高影响事实，显示来源机构与最近核验时间。</td></tr>
+              <tr><td>地图 / 住宿服务</td><td>路线距离、估算车程、地点位置、住宿候选和供应情况。</td><td>固定驾驶时间、实际库存不变、酒店适合所有人。</td><td>标明数据来源与更新时间；临近出发再次确认。</td></tr>
+            </tbody></table></div>
+            <div class="grid two" style="margin-top:16px">
+              <div class="panel"><h3>每条建议给出“证据卡”</h3><p>来源名称与类型 · 原始链接 · 内容日期/旅行日期 · 支持的具体判断 · 与本次行程的适配度 · 尚未核实项。</p></div>
+              <div class="panel"><h3>来源接入分阶段</h3><p>首版支持用户粘贴公开链接、上传自有行程文件和人工精选资料；批量平台数据只在官方接口、授权或合作允许后接入。公开可见不等于默认可批量抓取。</p></div>
+            </div>
+            <div class="slide-footer"><span>关键原则：观点与事实分层；来源越重要，核验门槛越高</span><span>06 / 11</span></div>
+          </section>
+          <section class="slide" data-title="首版范围与边界" data-kicker="MVP SCOPE · 08">
+            <div class="eyebrow">07 / 首版范围与产品边界</div><h2>先验证“规划工作台”<br />是否真的省力。</h2>
+            <div class="grid two" style="margin-top:22px">
+              <div class="panel"><div class="kicker">首版包含</div><h3>围绕行程决策的最小闭环</h3><p>创建自驾旅行 → 生成逐日草案 → 查看来源 → 比较/替换活动 → 看路线和住宿联动 → 同行确认 → 保存分享。以手机 App 为主，先支持单一示范区域。</p></div>
+              <div class="panel"><div class="kicker">首版不做</div><h3>不把范围扩成旅行超级 App</h3><p>不做机酒交易/支付；不替代 Google Maps 或 Apple 地图导航；不保证酒店库存；不自动批量抓取受限制的社交平台；不承诺没有来源的“真实体验”；不做泛化全球路线覆盖。</p></div>
+            </div>
+            <h3 style="margin-top:24px">关键依赖和降级方案</h3>
+            <div class="grid three" style="margin-top:12px">
+              <div class="metric"><strong>路线与车程</strong><span>依赖地图服务可用性和许可；不可用时展示用户可核验的路线链接，不伪装成精确导航。</span></div>
+              <div class="metric"><strong>住宿供应</strong><span>首版可从住宿区域和公开候选开始；实时价格/房态交给合作 API 或跳转预订方核实。</span></div>
+              <div class="metric"><strong>社交内容</strong><span>链接导入与人工策展先行；平台授权/API 或正式合作是规模化自动接入的前提。</span></div>
+            </div>
+            <div class="slide-footer"><span>首版目标：验证核心工作流，不提前承诺未拿到的接口能力</span><span>07 / 11</span></div>
+          </section>
+          <section class="slide" data-title="核心体验细节" data-kicker="PRODUCT BEHAVIOR · 09">
+            <div class="eyebrow">08 / 核心体验与规则</div><h2>替换一个点，系统要解释<br />会连带改变什么。</h2>
+            <div class="grid two" style="margin-top:21px">
+              <div class="panel"><h3>一天的计划卡至少包括</h3><p>日期与起终点 · 预计驾驶段/时间 · 当日主要体验 · 活动体力/时长标签 · 住宿区域 · 来源入口 · 用户确认状态。</p></div>
+              <div class="panel"><h3>替代项的比较维度</h3><p>为什么匹配 · 与原安排的车程差 · 所需时间与体力 · 是否需要预约 · 对当晚住宿/次日出发的影响 · 证据来源。</p></div>
+              <div class="panel"><h3>替换后影响预览</h3><p>明确指出增加/减少的驾驶、可能压缩的停留、住宿地点是否改变、次日是否需要重排；用户确认后再应用。</p></div>
+              <div class="panel"><h3>信息状态要能区分</h3><p><strong>已由官方核实</strong>、<strong>来自旅行者/旅行社经验</strong>、<strong>地图估算</strong>、<strong>待用户确认</strong>分别呈现，并显示更新时间。</p></div>
+            </div>
+            <div class="hero"><p><strong>失败处理：</strong>资料不足时可以给出“需要补充信息”的问题或不推荐替换；不为了让行程看起来完整而编造来源、路线精度、酒店库存或开放状态。</p></div>
+            <div class="slide-footer"><span>关键交互判断：用户能否在一个页面内做决定并理解后果</span><span>08 / 11</span></div>
+          </section>
+          <section class="slide" data-title="商业模式假设" data-kicker="BUSINESS HYPOTHESES · 10">
+            <div class="eyebrow">09 / 商业模式假设</div><h2>先验证价值，再决定<br />怎样收费。</h2>
+            <p class="lede">当前没有足够证据支持具体定价或市场规模。以下是待验证的商业路径，不是已确定结论。</p>
+            <div class="grid three" style="margin-top:21px">
+              <div class="panel"><div class="kicker">假设 A</div><h3>单次旅行 / 高级计划</h3><p>基础路线草案免费；深度证据整理、多人协作、复杂多日重排作为付费能力测试。</p></div>
+              <div class="panel"><div class="kicker">假设 B</div><h3>按旅行季订阅</h3><p>频繁自驾或持续规划多次旅行的用户，可能更愿意为长期资料管理和跨行程偏好付费。</p></div>
+              <div class="panel"><div class="kicker">假设 C</div><h3>透明的预订合作</h3><p>用户主动跳转后产生的住宿/活动合作收入可探索；商业推荐要标识，并与行程匹配排序隔离。</p></div>
+            </div>
+            <div class="callout" style="margin-top:18px"><strong>需要访谈验证：</strong>用户愿意为节省规划时间、来源核查和多人协作中的哪一项付费？他们现在已有的 AI、地图和预订工具是否已经足够？</div>
+            <div class="slide-footer"><span>不在验证前写入收入预测或付费转化假设</span><span>09 / 11</span></div>
+          </section>
+          <section class="slide" data-title="验证计划与指标" data-kicker="VALIDATION · 11">
+            <div class="eyebrow">10 / 验证计划与成功指标</div><h2>先验证工作流是否减负，<br />再扩大资料和地图投入。</h2>
+            <div class="grid two" style="margin-top:20px">
+              <div class="panel"><h3>第一轮：问题访谈</h3><p>找近期规划过多日自驾旅行的人，复盘他们真实的搜索、核实、住宿选择、同行决策和途中改动；收集一份脱敏的实际行程作测试输入。</p></div>
+              <div class="panel"><h3>第二轮：可用性试走</h3><p>让用户用一个真实路线完成创建、逐日审核、替换活动和选住宿；观察卡住点、跳出工具的次数，以及用户对来源的信任。</p></div>
+            </div>
+            <h3 style="margin-top:23px">试点建议观察的指标（先记基线，不预设目标值）</h3>
+            <div class="grid three" style="margin-top:11px">
+              <div class="metric"><strong>规划效率</strong><span>从填写基本条件到第一版可讨论行程所需时间；每个计划外部搜索/切换次数。</span></div>
+              <div class="metric"><strong>计划可用度</strong><span>逐日确认率；日程被大幅重排的比例；驾驶/住宿冲突在出发前发现的数量。</span></div>
+              <div class="metric"><strong>证据价值</strong><span>来源卡打开率；用户判断“足以核实”的比例；因资料不适用被拒绝的建议。</span></div>
+            </div>
+            <div class="slide-footer"><span>目标值在首轮观察后设定</span><span></span></div>
+          </section>
+          <section class="slide" data-title="路线图与待验证问题" data-kicker="NEXT STEPS · 12">
+            <div class="eyebrow">11 / 交付路线与待验证问题</div><h2>从小范围真实行程开始，<br />逐步建立可信度。</h2>
+            <div class="panel" style="margin-top:18px">
+              <div class="phase"><span class="badge">阶段 0</span><div><h3>定义与验证</h3><p>访谈旅行组织者；选一个示范路线；确认数据来源、地图服务和住宿信息的可接入边界。</p></div></div>
+              <div class="phase"><span class="badge">阶段 1</span><div><h3>规划工作台原型</h3><p>实现旅行约束、逐日行程、来源卡、活动替代、路线/住宿联动和分享评审。</p></div></div>
+              <div class="phase"><span class="badge">阶段 2</span><div><h3>小规模试点</h3><p>用真实行程完成可用性测试；记录用户修改、来源缺口、规划时间和失败情况。</p></div></div>
+              <div class="phase"><span class="badge">阶段 3</span><div><h3>决定扩展方向</h3><p>根据试点结果选择：更多路线地区、授权内容接入、协作能力、途中实时信息或商业验证。</p></div></div>
+            </div>
+            <h3 style="margin-top:21px">优先验证的问题</h3>
+            <div class="grid two" style="margin-top:10px">
+              <div class="quote">首发用户和首发路线选谁？<small>范围聚焦</small></div>
+              <div class="quote">第一版最先证明哪一个价值？<small>价值排序</small></div>
+              <div class="quote">链接导入与人工策展能否支撑试点？<small>资料策略</small></div>
+              <div class="quote">用户需要个人使用，还是多人协作？<small>产品形态</small></div>
+            </div>
+            <div class="hero"><p><strong>近期目标：</strong>确认一个首发人群、一条真实试点路线、首版 3 个必做流程，以及需要验证的数据/服务合作问题。</p></div>
+            <div class="slide-footer"><span>产品假设需通过真实用户和路线验证</span><span></span></div>
+          </section>
+        </div>
+        <footer class="bottombar"><div class="progress" id="progress">第 1 / 12 节</div><div class="pager"><button class="btn" id="prevBtn">← 上一节</button><button class="btn primary" id="nextBtn">下一节 →</button></div></footer>
+      </main>
+    </div>
+    <div class="modal-back" id="resetModal" role="dialog" aria-modal="true" aria-labelledby="resetTitle"><div class="modal"><h2 id="resetTitle">恢复计划书原稿？</h2><p>这会用初始内容覆盖你在此浏览器里编辑的版本。若想保留修改，请先导出 Markdown。</p><div class="modal-actions"><button class="btn" id="cancelReset">取消</button><button class="btn danger" id="confirmReset">恢复原稿</button></div></div></div>
+    <div class="toast" id="toast" role="status"></div>
+    <script>
+      (()=>{
+        const KEY="waymark-product-plan-v1";
+        const shell=document.getElementById("shell");
+        const slides=[...document.querySelectorAll(".slide")];
+        slides.forEach((slide,index)=>{const footer=slide.querySelector(".slide-footer");if(footer?.lastElementChild)footer.lastElementChild.textContent=`${String(index+1).padStart(2,"0")} / ${slides.length}`});
+        const nav=document.getElementById("nav");
+        const progress=document.getElementById("progress");
+        const saveState=document.getElementById("saveState");
+        let current=0,editing=false,saveTimer;
+        slides.forEach((slide,index)=>{
+          slide.querySelectorAll("h1,h2,h3,p,td,th,.tag,.step strong,.step small,.phase h3,.phase p,.quote,.metric strong,.metric span,.panel .kicker,.callout,.slide-footer span,.app-head,.app-caption,.app-mini-card strong,.app-mini-card span,.app-row b,.app-row span,.app-source,.app-cta,.app-tabs span,.app-tabs b,.app-sketch-note").forEach(el=>el.setAttribute("contenteditable","false"));
+          const button=document.createElement("button");
+          button.innerHTML=`<span class="num">${String(index+1).padStart(2,"0")}</span><span>${slide.dataset.title}</span>`;
+          button.addEventListener("click",()=>show(index));
+          nav.appendChild(button);
+        });
+        const navButtons=[...nav.querySelectorAll("button")];
+        function show(index){current=Math.max(0,Math.min(slides.length-1,index));slides.forEach((s,i)=>s.classList.toggle("active",i===current));navButtons.forEach((b,i)=>b.classList.toggle("active",i===current));progress.textContent=`第 ${current+1} / ${slides.length} 节 · ${slides[current].dataset.title}`;document.getElementById("prevBtn").disabled=current===0;document.getElementById("nextBtn").textContent=current===slides.length-1?"回到开头 ↑":"下一节 →";}
+        function toast(message){const el=document.getElementById("toast");el.textContent=message;el.classList.add("show");setTimeout(()=>el.classList.remove("show"),1800)}
+        function snapshot(){return slides.map(s=>s.innerHTML)}
+        function restore(items){if(!Array.isArray(items)||items.length!==slides.length)return false;slides.forEach((s,i)=>s.innerHTML=items[i]);return true}
+        function persist(){clearTimeout(saveTimer);saveState.textContent="正在保存…";saveTimer=setTimeout(()=>{localStorage.setItem(KEY,JSON.stringify(snapshot()));saveState.textContent="已保存到此浏览器"},160)}
+        try{const saved=JSON.parse(localStorage.getItem(KEY)||"null");if(saved)restore(saved)}catch{}
+        document.querySelectorAll("#slides [contenteditable]").forEach(el=>el.setAttribute("contenteditable","false"));
+        document.getElementById("editBtn").addEventListener("click",()=>{
+          editing=!editing;shell.classList.toggle("editing",editing);document.getElementById("editBtn").textContent=editing?"完成编辑":"编辑内容";
+          document.querySelectorAll("#slides [contenteditable]").forEach(el=>el.setAttribute("contenteditable",String(editing)));
+          if(editing){toast("点击文字即可修改；修改会自动保存在此浏览器")}else{persist();toast("修改已保存到此浏览器")}
+        });
+        document.getElementById("slides").addEventListener("input",()=>{if(editing)persist()});
+        document.getElementById("prevBtn").addEventListener("click",()=>show(current-1));
+        document.getElementById("nextBtn").addEventListener("click",()=>show(current===slides.length-1?0:current+1));
+        document.addEventListener("keydown",event=>{if(event.target.isContentEditable)return;if(event.key==="ArrowRight")show(current+1);if(event.key==="ArrowLeft")show(current-1)});
+        document.getElementById("printBtn").addEventListener("click",()=>window.print());
+        document.getElementById("exportBtn").addEventListener("click",()=>{
+          const markdown=slides.map((s,i)=>`# ${s.dataset.title}\n\n${s.innerText.trim().replace(/\n{3,}/g,"\n\n")}`).join("\n\n---\n\n");
+          const blob=new Blob([`# 路书 Waymark｜产品计划书\n\n${markdown}\n`],{type:"text/markdown;charset=utf-8"});const link=document.createElement("a");link.href=URL.createObjectURL(blob);link.download="路书-Waymark-产品计划书.md";link.click();URL.revokeObjectURL(link.href);toast("已导出 Markdown 文件");
+        });
+        const modal=document.getElementById("resetModal");
+        document.getElementById("resetBtn")?.addEventListener("click",()=>modal.classList.add("open"));
+        document.getElementById("cancelReset").addEventListener("click",()=>modal.classList.remove("open"));
+        document.getElementById("confirmReset").addEventListener("click",()=>{localStorage.removeItem(KEY);location.reload()});
+        const reset=document.createElement("button");reset.className="btn";reset.id="resetBtn";reset.textContent="恢复原稿";reset.title="恢复初始计划书内容";document.querySelector(".actions").insertBefore(reset,document.getElementById("editBtn"));reset.addEventListener("click",()=>modal.classList.add("open"));
+        show(0);
+      })();
+    </script>
+  </body>
+</html>
