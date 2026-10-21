@@ -18,7 +18,7 @@
     <div class="shell" id="shell">
       <aside class="sidebar">
         <div class="brand"><div class="brand-mark">路</div><div><strong>路书 <span style="font-weight:400">WAYMARK</span></strong><small>自驾旅行规划 · 产品计划</small></div></div>
-        <div class="sidebar-label">产品计划 · v0.3</div>
+        <div class="sidebar-label">产品计划 · v0.4</div>
         <nav class="nav" id="nav" aria-label="计划书章节"></nav>
         <div class="sidebar-foot">产品目标<br />把分散攻略变成有依据、可调整的自驾行程。<br /><br />产品名称「路书」为工作名。</div>
       </aside>
@@ -66,17 +66,56 @@
             </div>
             <div class="slide-footer"><span>用户确认每个关键安排，AI 不替用户拍板</span><span></span></div>
           </section>
-          <section class="slide" data-title="App 功能框架草图" data-kicker="APP STRUCTURE · 04">
-            <div class="eyebrow">03 / App 功能框架</div><h2>行程是主线，地图和证据贴着每天走。</h2>
-            <div class="app-sketch" aria-label="自驾旅行 App 三个关键页面框架草图">
-              <div class="app-phone"><div class="app-screen"><div class="app-status"><span>9:41</span><span>•••　▰</span></div><div class="app-head"><span>我的行程</span><span>＋</span></div><div class="app-caption">继续确认</div><div class="app-mini-card"><strong>加州国家公园自驾</strong><span>9 天 · 3 位同行<br />旧金山 → 优胜美地 → 洛杉矶</span><div class="app-progress"><i></i></div><span>6 / 9 天已确认</span></div><div class="app-cta">继续规划</div><div class="app-tabs"><b>行程</b><span>发现</span><span>收藏</span><span>我的</span></div></div><div class="app-sketch-note"><strong>行程首页：</strong>待确认日程一目了然。</div></div>
-              <div class="app-phone"><div class="app-screen"><div class="app-status"><span>9:41</span><span>•••　▰</span></div><div class="app-head"><span>‹　加州自驾</span><span>⋯</span></div><div class="app-caption">第 4 天 · 优胜美地</div><div class="app-map"></div><div class="app-row"><b>驾驶</b><span>预计车程 · 地图估算</span></div><div class="app-row"><b>活动</b><span>山谷观景 / 徒步</span></div><div class="app-source">依据：官方信息 · 旅行者游记　查看来源 ›</div><div class="app-row"><b>住宿</b><span>查看周边住宿区域 ›</span></div><div class="app-cta">替换活动</div><div class="app-tabs"><b>行程</b><span>发现</span><span>收藏</span><span>我的</span></div></div><div class="app-sketch-note"><strong>每日详情：</strong>行程、路线、来源、住宿放在一起。</div></div>
-              <div class="app-phone"><div class="app-screen"><div class="app-status"><span>9:41</span><span>•••　▰</span></div><div class="app-head"><span>选择替代活动</span><span>×</span></div><div class="app-caption">不徒步？看看这些选项</div><div class="app-mini-card"><strong>山谷观景点组合</strong><span>低体力 · 约 1.5 小时<br />查看绕行和开放信息</span><div class="app-source">官方信息 + 旅行者行程</div></div><div class="app-mini-card"><strong>短程步道 + 游客中心</strong><span>轻体力 · 约 2 小时<br />查看来源和季节限制</span></div><div class="app-caption">确认前预览车程、住宿与次日变化。</div><div class="app-cta">应用并预览变化</div><div class="app-tabs"><b>行程</b><span>发现</span><span>收藏</span><span>我的</span></div></div><div class="app-sketch-note"><strong>替代面板：</strong>比较后再应用。</div></div>
+          <section class="slide" data-title="App 信息架构" data-kicker="APP ARCHITECTURE · 04">
+            <div class="eyebrow">03 / App 信息架构</div><h2>四个主入口，承载一次旅行的完整周期。</h2>
+            <p class="lede">用户从行程进入规划和执行；发现、收藏提供可追溯的内容入口；个人设置保存偏好与同行协作。</p>
+            <div class="table-wrap" style="margin-top:18px"><table><thead><tr><th>主入口</th><th>页面层级</th><th>用户完成的事</th></tr></thead><tbody>
+              <tr><td>行程</td><td>行程列表 → 行程总览 → 每日详情 → 编辑/替换 → 影响预览</td><td>创建旅行、看地图和每日安排、调整路线/活动/住宿、确认并执行。</td></tr>
+              <tr><td>发现</td><td>目的地/主题 → 游记或旅行社方案 → 来源详情</td><td>按地点和偏好浏览公开攻略或已收录方案，查看原始出处后保存到某天。</td></tr>
+              <tr><td>收藏</td><td>收藏夹 → 地点/活动/行程资料 → 添加到旅行</td><td>整理已保存内容，保留链接、适用季节和个人备注，复用到新行程。</td></tr>
+              <tr><td>我的</td><td>旅行偏好 → 同行成员 → 通知/离线/隐私设置</td><td>设置预算、驾驶和体力偏好；管理成员权限、下载行程和资料来源。</td></tr>
+            </tbody></table></div>
+            <div class="grid three" style="margin-top:14px">
+              <div class="metric"><strong>行程内工具</strong><span>地图/列表切换、日期导航、筛选、路线段详情、天气与提醒。</span></div>
+              <div class="metric"><strong>协作入口</strong><span>按天评论、候选投票、负责人确认；修改保留操作者和时间。</span></div>
+              <div class="metric"><strong>全局状态</strong><span>草案、待核实、待同行确认、已确认、已变更；来源显示更新时间。</span></div>
             </div>
-            <div class="callout"><strong>页面路径：</strong>行程 → 某一天 → 来源与替代 → 影响预览 → 确认。示意车程和地点需接入地图后核实。</div>
-            <div class="slide-footer"><span>功能框架草图，非最终视觉稿</span><span></span></div>
+            <div class="callout" style="margin-top:14px"><strong>导航原则：</strong>发现和收藏服务于行程；所有被采用的地点与建议，最终都落到具体日期、路线和来源上。</div>
+            <div class="slide-footer"><span>App 页面与导航范围 · 首版框架</span><span></span></div>
           </section>
-          <section class="slide" data-title="用户最终拿到什么" data-kicker="TRIP DELIVERABLE · 05">
+          <section class="slide" data-title="核心页面布局" data-kicker="SCREEN FRAMEWORK · 05">
+            <div class="eyebrow">04 / 页面布局与操作</div><h2>每个关键页面，都要回答一个明确问题。</h2>
+            <div class="table-wrap" style="margin-top:16px"><table><thead><tr><th>页面</th><th>页面主要区域</th><th>关键操作 / 结果</th></tr></thead><tbody>
+              <tr><td>行程首页</td><td>即将出发/进行中行程；待确认事项；继续上次编辑；创建入口。</td><td>新建旅行、回到待处理日期、打开已分享行程。</td></tr>
+              <tr><td>创建行程</td><td>日期与天数、起终点、同行人数/车型、必去点、兴趣、预算、驾驶/体力上限。</td><td>检查缺失条件；生成可编辑草案；明确列出采用的假设。</td></tr>
+              <tr><td>行程总览</td><td>顶部日期和路线摘要；互动地图；逐日卡片；日里程/驾驶时间；住宿摘要；冲突提示。</td><td>切换地图/列表；进入某天；邀请同行；分享确认版。</td></tr>
+              <tr><td>每日详情</td><td>日期与起终点；地图和路线段；按时间排列的停靠/活动；时长与强度；来源；过夜区域。</td><td>加点、删点、拖动排序、替换活动、查看来源、编辑住宿。</td></tr>
+              <tr><td>替代选项</td><td>按兴趣、体力、耗时、季节/开放情况筛选；候选卡片含路线绕行、停留时间、适用原因和来源。</td><td>打开原始资料；并列比较；收藏；选择一项进入影响预览。</td></tr>
+              <tr><td>影响预览</td><td>变更前后对照：新增车程/时长、当天活动、到店时间、住宿位置、次日路线和警告。</td><td>确认应用、返回比较或撤销；写入修改记录并更新行程状态。</td></tr>
+              <tr><td>住宿规划</td><td>过夜区域地图与候选列表；到当天终点/次日首站距离；预算、日期、预订入口及信息更新时间。</td><td>先选住宿区域，再打开合作/外部预订；房价房态无授权时明确显示“外部查询”。</td></tr>
+              <tr><td>来源 / 执行 / 分享</td><td>来源原文链接、作者/机构、旅行日期、摘录与更新时间；执行页突出今天和导航；分享页提供确认版本。</td><td>核验并标记来源；跳转地图导航；记录现场调整；分享只读链接或导出 PDF。</td></tr>
+            </tbody></table></div>
+            <div class="hero"><p><strong>关键页面共用规则：</strong>建议卡同时呈现“为什么适合你、依据在哪里、会影响什么”；事实、旅行者体验和系统估算分开展示。</p></div>
+            <div class="slide-footer"><span>布局描述到页面区域和关键操作，不限定视觉风格</span><span></span></div>
+          </section>
+          <section class="slide" data-title="核心流程与状态" data-kicker="CORE FLOWS · 06">
+            <div class="eyebrow">05 / 核心流程、状态与数据对象</div><h2>计划可追溯，变化有预览，确认可回退。</h2>
+            <div class="grid two" style="margin-top:16px">
+              <div class="panel"><div class="kicker">A · 从需求到确认行程</div><p>建旅行 → 填日期/偏好/必去点 → 生成草案 → 检查车程、时间和过夜区域 → 逐日查看来源与选项 → 同行评论/投票 → 负责人确认 → 分享。</p></div>
+              <div class="panel"><div class="kicker">B · 替换一个活动</div><p>选当天活动 → 查看匹配选项与出处 → 对比体力/时长/绕行 → 看当日、住宿和次日影响 → 应用或放弃 → 留下变更记录；来源过期时先提示复核。</p></div>
+              <div class="panel"><div class="kicker">C · 住宿与路线联动</div><p>查看过夜区域 → 比较与终点/次日首站的距离 → 选择区域或外部候选 → 回看当天到达时间与次日出发负担 → 确认后关联该日期。</p></div>
+              <div class="panel"><div class="kicker">D · 旅行中临时调整</div><p>天气/封路/延误或用户手动提出变化 → 只重算受影响的未执行部分 → 展示可行替代与影响 → 用户确认/手动改 → 保存新版本；无网时打开已下载的确认版。</p></div>
+            </div>
+            <div class="table-wrap" style="margin-top:14px"><table><thead><tr><th>核心对象</th><th>记录内容</th><th>产品用途</th></tr></thead><tbody>
+              <tr><td>Trip / Day</td><td>日期、同行者、偏好与限制；每日起终点、状态和确认版本。</td><td>承载行程框架和逐日审核。</td></tr>
+              <tr><td>Stop / Route leg</td><td>地点/活动、顺序、停留时长、距离/时间估算、导航目的地。</td><td>重排或替换时重新计算路段和日负担。</td></tr>
+              <tr><td>Lodging plan</td><td>过夜区域、候选链接、日期、与路线的关系；价格/房态来源与时间。</td><td>把住宿纳入当天和次日检查；区分区域建议与实时库存。</td></tr>
+              <tr><td>Evidence / Change</td><td>原始链接、来源类型、作者/机构、适用日期、摘录/更新时间；变更前后值、操作者、时间。</td><td>支持核实、归因、回看和撤销；体验建议不冒充官方事实。</td></tr>
+            </tbody></table></div>
+            <div class="callout" style="margin-top:14px"><strong>状态流转：</strong>草案 → 待核实 → 待同行确认 → 已确认 → 已变更。每项来源和实时信息另标“有效/需复核/不可用”；无依据时不生成事实结论。</div>
+            <div class="slide-footer"><span>适用于规划、协作和旅行中调整</span><span></span></div>
+          </section>
+          <section class="slide" data-title="用户最终拿到什么" data-kicker="TRIP DELIVERABLE · 07">
             <div class="eyebrow">04 / 最终行程交付</div><h2>主成果是 App 里的互动行程，<br />文档是便于带走的副本。</h2>
             <div class="grid two" style="margin-top:20px">
               <div class="panel"><div class="kicker">App 内 · 可编辑主版本</div><h3>互动地图 + 每日计划卡</h3><p>路线和停靠点可视化；逐日列出车程、活动、停留时间、住宿区域、来源和确认状态。换点后预览受影响的路线与后续安排。</p></div>
@@ -92,7 +131,7 @@
             <div class="hero"><p><strong>不以表格作为主产品。</strong>结构化行程支持地图和修改；PDF/Markdown 是可导出的携带或备份格式。</p></div>
             <div class="slide-footer"><span>主版本始终可在 App 里继续调整</span><span></span></div>
           </section>
-          <section class="slide" data-title="数据来源与可行性" data-kicker="DATA & FEASIBILITY · 06">
+          <section class="slide" data-title="数据来源与可行性" data-kicker="DATA & FEASIBILITY · 08">
             <div class="eyebrow">05 / 数据从哪里来</div><h2>首版能靠公开资料启动；<br />两类数据需要商业接入。</h2>
             <div class="table-wrap" style="margin-top:16px"><table><thead><tr><th>要解决的问题</th><th>来源 / 首版做法</th><th>可行性与限制</th></tr></thead><tbody>
               <tr><td>景点、开放、园区提醒</td><td><a href="https://www.nps.gov/subjects/digital/nps-data-api.htm" target="_blank" rel="noreferrer">美国国家公园 NPS API</a>；各园区官网</td><td>可申请 API key；按地区接入，逐个补齐州/地方来源。</td></tr>
@@ -104,7 +143,7 @@
             <div class="callout" style="margin-top:14px"><strong>可行性判断：</strong>行程规划、官方信息、用户提供的攻略链接可先做；地图 API 是成本与许可评估项；社交平台批量内容和实时酒店库存不是首版前提。</div>
             <div class="slide-footer"><span>资料只支持它能证明的内容：体验不等于官方事实</span><span></span></div>
           </section>
-          <section class="slide" data-title="MVP 范围与关键依赖" data-kicker="MVP & RISKS · 07">
+          <section class="slide" data-title="MVP 范围与关键依赖" data-kicker="MVP & RISKS · 09">
             <div class="eyebrow">06 / 首版范围与依赖</div><h2>先证明一条路线真的更好规划。</h2>
             <div class="grid two" style="margin-top:18px">
               <div class="panel"><div class="kicker">首版做</div><h3>一个地区，一条完整规划闭环</h3><p>创建旅行 → 逐日草案 → 来源核对 → 替代活动 → 地图/住宿联动 → 同行确认 → 分享和 PDF。</p></div>
@@ -118,7 +157,7 @@
             <div class="hero"><p><strong>判断门槛：</strong>先用人工精选资料和一条示范路线验证流程；拿到用户价值证据后，再谈平台和酒店数据合作。</p></div>
             <div class="slide-footer"><span>首发路线及供应商待验证</span><span></span></div>
           </section>
-          <section class="slide" data-title="验证计划与下一步" data-kicker="VALIDATION · 08">
+          <section class="slide" data-title="验证计划与下一步" data-kicker="VALIDATION · 10">
             <div class="eyebrow">07 / 怎么判断值得做</div><h2>先用真实行程验证三个问题。</h2>
             <div class="grid three" style="margin-top:18px">
               <div class="metric"><strong>省时间了吗？</strong><span>记录规划耗时和外部搜索/切换次数。</span></div>
@@ -134,14 +173,14 @@
             <div class="slide-footer"><span>商业模式和扩区等价值验证后再定</span><span></span></div>
           </section>
         </div>
-        <footer class="bottombar"><div class="progress" id="progress">第 1 / 8 节</div><div class="pager"><button class="btn" id="prevBtn">← 上一节</button><button class="btn primary" id="nextBtn">下一节 →</button></div></footer>
+        <footer class="bottombar"><div class="progress" id="progress">第 1 / 10 节</div><div class="pager"><button class="btn" id="prevBtn">← 上一节</button><button class="btn primary" id="nextBtn">下一节 →</button></div></footer>
       </main>
     </div>
     <div class="modal-back" id="resetModal" role="dialog" aria-modal="true" aria-labelledby="resetTitle"><div class="modal"><h2 id="resetTitle">恢复计划书原稿？</h2><p>这会用初始内容覆盖你在此浏览器里编辑的版本。若想保留修改，请先导出 Markdown。</p><div class="modal-actions"><button class="btn" id="cancelReset">取消</button><button class="btn danger" id="confirmReset">恢复原稿</button></div></div></div>
     <div class="toast" id="toast" role="status"></div>
     <script>
       (()=>{
-        const KEY="waymark-product-plan-v2";
+        const KEY="waymark-product-plan-v3";
         const shell=document.getElementById("shell");
         const slides=[...document.querySelectorAll(".slide")];
         slides.forEach((slide,index)=>{const footer=slide.querySelector(".slide-footer");if(footer?.lastElementChild)footer.lastElementChild.textContent=`${String(index+1).padStart(2,"0")} / ${slides.length}`});
